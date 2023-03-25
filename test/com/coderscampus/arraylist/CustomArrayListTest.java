@@ -48,7 +48,7 @@ class CustomArrayListTest {
 	}
 
 	@Test
-	void should_throw_expection_if_less_than_or_more_than_size_of_list() {
+	void should_throw_expection_if_less_than_or_bigger_than_size_of_list() {
 		
 		var list = new CustomArrayList<>();
 		
