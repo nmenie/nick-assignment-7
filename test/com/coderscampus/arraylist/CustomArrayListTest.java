@@ -11,7 +11,11 @@ class CustomArrayListTest {
 
 		var list = new CustomArrayList<>();
 
-		assertEquals(true, list.add(8));
+		int addItem = 11;
+
+		assertEquals(true, list.add(addItem));
+		assertEquals(1, list.getSize());
+		assertEquals(addItem, list.get(0));
 
 	}
 
@@ -48,19 +52,21 @@ class CustomArrayListTest {
 	}
 
 	@Test
-	void should_throw_expection_if_less_than_or_bigger_than_size_of_list() {
-		
-		var list = new CustomArrayList<>();
-		
-		Object[] array = {"a", "b", "c", "d"};
+	void test_Add_InvalidIndex() {
+		CustomArrayList<String> list = new CustomArrayList<>();
+
 		assertThrows(IndexOutOfBoundsException.class, () -> {
-			Object item = array[6];
+			list.add(1, "i");
 		});
-		
-		
 	}
 
-	
-	
+	@Test
+	void test_Remove_InvalidationIndex() {
+		CustomArrayList<String> list = new CustomArrayList<>();
+
+		assertThrows(IndexOutOfBoundsException.class, () -> {
+			list.remove(4);
+		});
+	}
 
 }
