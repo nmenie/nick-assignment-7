@@ -43,24 +43,28 @@ public class CustomArrayList<T> implements CustomList<T> {
 
 		items[index] = item;
 		size++;
-		
 
 		return true;
 	}
 
 	@SuppressWarnings("unchecked")
 	public T remove(int index) {
-		if (index < 0 || index > size) {
+		if (index < 0 || index >= size) {
 			throw new IndexOutOfBoundsException("Index is out of bounds! " + index);
 
 		}
 
 		T removeItem = (T) items[index];
 
-		items[index] = null;
+		for (int i = index; i < size - 1; i++) {
+
+			items[i] = items[i + 1];
+		}
+
+		items[size - 1] = null;
+		
 
 		return removeItem;
 	}
 
 }
-
