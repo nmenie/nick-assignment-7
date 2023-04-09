@@ -47,8 +47,16 @@ class CustomArrayListTest {
 	void should_remove_item_from_list() {
 
 		var list = new CustomArrayList<>();
+		
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		
+		Object removeItem =  list.remove(1);
 
-		assertEquals(null, list.remove(0));
+		assertEquals(2, removeItem);
+		assertEquals(4, list.getSize());
 	}
 
 	@Test
@@ -65,9 +73,10 @@ class CustomArrayListTest {
 		CustomArrayList<String> list = new CustomArrayList<>();
 
 		assertThrows(IndexOutOfBoundsException.class, () -> {
-			list.remove(4);
+			list.remove(0);
 		});
 	}
 
 }
+
 
