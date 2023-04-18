@@ -62,10 +62,13 @@ public class CustomArrayList<T> implements CustomList<T> {
 		}
 
 		items[size - 1] = null;
+		size--;
 		
 
 		return removeItem;
 	}
 
 }
+
+
 

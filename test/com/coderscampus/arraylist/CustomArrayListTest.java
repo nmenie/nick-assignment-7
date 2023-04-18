@@ -56,7 +56,7 @@ class CustomArrayListTest {
 		Object removeItem =  list.remove(1);
 
 		assertEquals(2, removeItem);
-		assertEquals(4, list.getSize());
+		assertEquals(3, list.getSize());
 	}
 
 	@Test
@@ -78,5 +78,7 @@ class CustomArrayListTest {
 	}
 
 }
+
+
 
 
