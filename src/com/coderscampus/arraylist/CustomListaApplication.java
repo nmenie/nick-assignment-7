@@ -20,9 +20,9 @@ public class CustomListaApplication {
 		myCustomList.remove(9);
 		myCustomList.remove(7);
 		myCustomList.add(7, "1000");
-		myCustomList.add("2342");
-		myCustomList.add("2342");
-		myCustomList.add("2342");
+		myCustomList.add(7, "1001");
+		myCustomList.add(7, "1002");
+		myCustomList.add(7, "1003");
 
 //		myCustomList.add("e0");
 //		myCustomList.add("e1");
